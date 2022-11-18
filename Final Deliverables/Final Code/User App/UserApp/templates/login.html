@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="static/style.css">
+        <style>
+            body {
+              background-image: url('https://cdn.dribbble.com/users/27417/screenshots/11017927/media/2a0706f846edace3c4e81e0af4e63807.gif');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+              
+            }
+            </style>
+    </head>
+    <body>
+    <h1>Login</h1>
+    <p>{{message}}</p>
+    <div class="form_div">
+        <form action="/login" method="POST">
+            <input type="text" name="email" placeholder="Enter your email"><br>
+            <input type="password" name="password" placeholder="Enter your password"><br>
+            <input type="submit" value="Login">
+        </form>
+<!--        create a sign up button for register-->
+        <form action="{{url_for('register')}}" method="GET">
+            <p>To create a new account</p>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    </body>
